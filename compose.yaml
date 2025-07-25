@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://db:27017/exercise
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
